@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webhook-inspector"
+version = "1.0.0"
+description = "Local-first webhook receiver, inspector, verifier, and replay tool."
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Radwan Abdulhadi Ahmed"}]
+keywords = ["webhook", "http", "developer-tools", "sqlite"]
+
+[project.scripts]
+webhook-inspector = "webhook_inspector.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
